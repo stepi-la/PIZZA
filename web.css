@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Blazed';
+    src: url('Blazed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Revamped';
+    src: url('Revamped.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+    
+    .hero {
+      background-image: url('pizza.png'); /* Změň na svou fotku */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+  
+    }
+    
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.1); /* světlejší filtr */
+      height: 100%;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .main-text {
+      text-align: center;
+      margin-top: 40px;
+      font-size: clamp(3rem, 15vw, 200px);
+    }
+    
+    .main-text h1 {
+      font-size: 200px;
+      margin-bottom: 10px;
+      color: rgb(255, 60, 0); /* aby byl text čitelný na světlém pozadí */
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
+      font-family: 'Blazed', sans-serif;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+  
+    .content {
+      text-align: center;
+      margin-top: 50px;
+      font-family: 'Revamped', sans-serif;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 20px;
+      color: lightyellow; /* nebo jiná barva textu, pokud je potřeba */
+    }
+    
+    .work-photo {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      margin-bottom: 15px;
+    }
+    
+    .description {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1rem;
+    }
+    
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: #ffcc00;
+    }
+  
+    .nav-buttons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    
+    .nav-buttons button {
+      background-color: orangered;
+      border: 1px solid white;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-align: center;
+      font-family: 'Revamped', sans-serif;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    
+    .nav-buttons button:hover {
+      background-color: white;
+      color: black;
+    }
+    
+    .main-text p {
+      font-family: 'Revamped', sans-serif;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 20px;
+      color: white; /* nebo jiná barva textu, pokud je potřeba */
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
