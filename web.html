@@ -8,6 +8,11 @@
   </head>
   <body>
     <div class="hero">
+      <div style="height: 150vh"></div>
+      <div class="left-image"></div>
+      <div class="right-white">
+        <h1 class="main-text" id="mainHeading">Let<br />me<br />cook</h1>
+      </div>
       <div class="nav-buttons">
         <button
           onclick="window.open('https://pizza-backend-1-oe8c.onrender.com', '_blank')"
@@ -21,15 +26,28 @@
           Contact
         </button>
       </div>
-      <div class="overlay">
-        <div class="main-text">
-          <h1>Let me cook</h1>
-          <p>The real pizza</p>
-        </div>
-        <div class="content">
-          <p class="description"></p>
-        </div>
-      </div>
     </div>
+    <script>
+      let revealed = false;
+      window.addEventListener(
+        "wheel",
+        function (e) {
+          const heading = document.getElementById("mainHeading");
+          const rightWhite = document.querySelector(".right-white");
+          if (!revealed && e.deltaY > 0) {
+            heading.classList.add("hide");
+            rightWhite.classList.add("show-image");
+            rightWhite.classList.add("hide-bg");
+            revealed = true;
+          } else if (revealed && e.deltaY < 0) {
+            heading.classList.remove("hide");
+            rightWhite.classList.remove("show-image");
+            rightWhite.classList.remove("hide-bg");
+            revealed = false;
+          }
+        },
+        { passive: true }
+      );
+    </script>
   </body>
 </html>
